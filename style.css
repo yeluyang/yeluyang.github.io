@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+aside {
+    margin: 1%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+main {
+    margin: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+nav {
+    margin: 1%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+}
