@@ -15,18 +15,22 @@
         About Me
         <ul>
             <li>yeluyang</li>
-            <li>github.com/yeluyang</li>
+            <li><a href="https://github.com/yeluyang">github.com/yeluyang</a></li>
         </ul>
     </aside>
 
     <main>
         Lists of Articles
-        <ul id="articles"></ul>
+        <ul id="docs">
+            <li v-for="doc in docs"> <a v-bind:href="doc"> {{doc}} </a> </li>
+        </ul>
     </main>
 
     <nav>
         Category
-        <ul id="category"></ul>
+        <ul id="categories">
+            <li v-for="category in categories"><a>{{category}}</a></li>
+        </ul>
     </nav>
 
 </body>
