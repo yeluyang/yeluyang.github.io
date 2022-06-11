@@ -1,0 +1,8 @@
+# main links
+main:
+  - title: "Categories"
+    url: /categories
+    description: posts group by categories
+  - title: "Tags"
+    url: /tags
+    description: posts group by tags
