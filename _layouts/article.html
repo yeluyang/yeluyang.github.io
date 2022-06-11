@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="/styles/article.css">
+{% if page.tex == "mathjax" %}
+<!-- <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML" defer></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" defer></script> -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"
+	defer></script>
+{% endif %}
+
+<aside id="relative">
+	{% if site[page.collection].size > 2 or page.collection == "posts" and site[page.collection].size > 1 %}
+	<h2>{{ page.collection | capitalize }}</h2>
+	<ul>
+		{% for post in site[page.collection] %}
+		{% if post.slug != "index" and post.slug != page.slug %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			{% if site.show_excerpts %}
+			<p>
+				{{ post.excerpt }}
+			</p>
+			{% endif %}
+		</li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+	{% endif %}
+</aside>
+
+<article>
+	{{ content }}
+</article>
+
+<aside id="toc">
+	<h2>Table of Content</h2>
+	{% toc %}
+</aside>

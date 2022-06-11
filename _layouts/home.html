@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="/styles/home.css">
+
+
+<section>
+	{% if site.posts.size > 0 %}
+	<h2>Posts</h2>
+	<ul>
+		{% for post in site.posts %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title | escape }}</a>
+			{% assign date_format = "%b %-d, %Y" %}
+			<span>{{ post.date | date: date_format }}</span>
+			{% if site.show_excerpts %}
+			<p>
+				{{ post.excerpt }}
+			</p>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</section>

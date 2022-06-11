@@ -1,0 +1,24 @@
+/* SECTION: home style */
+
+body>main {
+	display: flex;
+}
+
+body>main>section {
+	margin: 0 auto;
+	width: 50%;
+}
+
+body>main>section>h2 {
+	font-size: 4rem;
+}
+
+body>main>section>ul li {
+	margin-bottom: 2rem;
+	list-style-type: none;
+}
+
+body>main>section>ul a {
+	font-size: 2rem;
+	margin-right: 1rem;
+}

@@ -1,0 +1,27 @@
+/* SECTION: article style */
+
+body>main {
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-areas: "relative article toc";
+}
+
+body>main>article {
+    grid-area: "article";
+    padding: 1rem;
+}
+
+body>main>aside {
+    position: sticky;
+    top: var(--header-sticky-offset);
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+body>main>aside#relative {
+    grid-area: "relative";
+}
+
+body>main>aside#toc {
+    grid-area: "toc";
+}

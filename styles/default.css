@@ -1,0 +1,157 @@
+/* SECTION: global style */
+
+:root {
+    font-size: 10px;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+
+    --theme-color-light: white;
+    --theme-color-gray: gray;
+    --theme-color-dark: black;
+
+    --z-index-top: 1;
+    --z-index-bottom: 0;
+
+    --header-footer-vertical-padding: 0.8rem;
+    --header-footer-horizon-padding: 3.2rem;
+
+    --header-height: 4rem;
+    --header-bottom-margin: 0.8rem;
+    --header-sticky-offset: calc(var(--header-height) + 2 * var(--header-footer-vertical-padding) + var(--header-bottom-margin));
+}
+
+* {
+    background-color: var(--theme-color-light);
+}
+
+ul.social {
+    list-style-type: none;
+    padding: initial;
+    text-align: left;
+}
+
+ul.social li {
+    margin: 0.8rem 0;
+}
+
+ul.social li>a {
+    padding-left: 2.4rem;
+    background-size: 2rem;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+ul.social li>a[href^="mailto:"] {
+    background-image: url(/assets/img/email.svg);
+}
+
+ul.social li>a[href^="http://github.com"],
+ul.social li>a[href^="https://github.com"] {
+    background-image: url(/assets/img/github.svg);
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* SECTION: 导航栏 */
+body>header {
+    position: sticky;
+    top: 0;
+    border-bottom: 0.1rem solid var(--theme-color-gray);
+    padding: var(--header-footer-vertical-padding) var(--header-footer-horizon-padding);
+    margin-bottom: var(--header-bottom-margin);
+    z-index: var(--z-index-top);
+
+    /* flex */
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+}
+
+body>header a {
+    color: initial;
+    text-decoration: initial;
+}
+
+body>header>nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+body>header>nav>h1 {
+    font-size: 2.8rem;
+    margin: 0;
+    margin-right: 2rem
+}
+
+body>header>nav>ul {
+    margin: initial;
+    padding: initial;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+body>header>nav>ul>li {
+    margin: 0 0.8rem;
+    height: 100%;
+}
+
+body>header>nav>ul>li>a {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+body>header>nav>ul>li>a:focus,
+body>header>nav>ul>li>a:active,
+body>header>nav>ul>li>a:hover {
+    color: var(--theme-color-light);
+    background-color: var(--theme-color-gray);
+    border-bottom: 0.4rem solid var(--theme-color-dark);
+}
+
+/* SECTION: 主内容 */
+body>main {
+    margin: 1rem;
+
+    /* flex */
+    flex: 4;
+}
+
+/* SECTION: 页脚 */
+body>footer {
+    border-top: 0.1rem solid var(--theme-color-gray);
+    padding: var(--header-footer-vertical-padding) var(--header-footer-horizon-padding);
+    max-height: 20rem;
+
+    /* flex */
+    display: flex;
+    justify-content: space-between;
+}
+
+body>footer>section:first-child {
+    text-align: right;
+}
+
+body>footer>section:last-child {
+    text-align: left;
+}
+
+body>footer>section>p>a>img#github-sponsor-img {
+    vertical-align: middle;
+    height: 3.2rem;
+}

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="/styles/home.css">
+
+<section>
+	<h2>{{ page.collection | capitalize }}</h2>
+	{% if site[page.collection].size > 1 %}
+	<ul>
+		{% for post in site[page.collection] %}
+		{% if post.slug != "index" %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			{% if site.show_excerpts %}
+			<p>
+				{{ post.excerpt }}
+			</p>
+			{% endif %}
+		</li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+	{% endif %}
+</section>
