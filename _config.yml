@@ -24,7 +24,7 @@ name: yeluyang
 email: ylycpg@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   yeluyang's blog
-url: https://blog.yeluyang.com # the base hostname & protocol for your site, e.g. http://example.com
+url: https://yeluyang.com # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 locale: zh
 repository: yeluyang/yeluyang.github.io
